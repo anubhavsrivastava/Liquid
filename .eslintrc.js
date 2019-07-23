@@ -5,9 +5,14 @@ module.exports = {
 	},
 	parserOptions: {
 		sourceType: 'module',
+
 		ecmaFeatures: {
+			jsx: true,
 			experimentalObjectRestSpread: true
 		}
 	},
-	extends: 'eslint:recommended'
+	rules: {
+		'react/prop-types': 0
+	},
+	extends: ['eslint:recommended', 'plugin:react/recommended']
 };
