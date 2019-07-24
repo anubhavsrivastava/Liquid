@@ -1,25 +1,34 @@
 {
-	"name": "liquid",
-	"version": "0.0.1",
-	"description": "Minimilistic React UI Components",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/anubhavsrivastava/Liquid.git"
-	},
-	"author": {
-		"name": "Anubhav Srivastava",
-		"email": "anubhav.srivastava00@gmail.com"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/anubhavsrivastava/Liquid/issues"
-	},
-	"homepage": "https://github.com/anubhavsrivastava/Liquid#readme",
-	"devDependencies": {
-		"eslint-plugin-react": "^7.14.3"
-	}
+  "name": "liquid",
+  "version": "0.0.1",
+  "description": "Minimilistic React UI Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anubhavsrivastava/Liquid.git"
+  },
+  "author": {
+    "name": "Anubhav Srivastava",
+    "email": "anubhav.srivastava00@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anubhavsrivastava/Liquid/issues"
+  },
+  "homepage": "https://github.com/anubhavsrivastava/Liquid#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "eslint-plugin-react": "^7.14.3"
+  },
+  "dependencies": {}
 }
