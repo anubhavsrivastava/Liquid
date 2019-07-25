@@ -4,10 +4,20 @@ import theme from './theme';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
+import { withPropsTable } from 'storybook-addon-react-docgen';
+import { withInfo } from '@storybook/addon-info';
+
+addDecorator(withPropsTable);
 
 addDecorator(jsxDecorator);
-addDecorator(withKnobs);
 
+addDecorator(
+	withInfo({
+		header: false
+	})
+);
+
+addDecorator(withKnobs);
 addParameters({
 	options: {
 		isFullscreen: false,

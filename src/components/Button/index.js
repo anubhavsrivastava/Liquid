@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './Button.scss';
-class Button extends React.Component {
+
+export default class Button extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -46,5 +47,3 @@ Button.defaultProps = {
 	mode: 'primary',
 	size: 'regular'
 };
-
-export default Button;
