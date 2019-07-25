@@ -9,16 +9,17 @@ import { withInfo } from '@storybook/addon-info';
 
 addDecorator(withPropsTable);
 
-addDecorator(jsxDecorator);
-
 addDecorator(
 	withInfo({
 		header: false
 	})
 );
 
+addDecorator(jsxDecorator);
+
 addDecorator(withKnobs);
 addParameters({
+	jsx: { skip: 1 },
 	options: {
 		isFullscreen: false,
 
