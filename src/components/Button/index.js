@@ -32,8 +32,8 @@ class Button extends React.Component {
 
 Button.propTypes = {
 	value: PropTypes.string.isRequired,
-	mode: PropTypes.oneOf('primary', 'secondary'),
-	size: PropTypes.oneOf('regular', 'big'),
+	mode: PropTypes.oneOf(['primary', 'secondary']),
+	size: PropTypes.oneOf(['regular', 'big']),
 	disabled: PropTypes.bool,
 	loading: PropTypes.bool,
 	fluid: PropTypes.bool
