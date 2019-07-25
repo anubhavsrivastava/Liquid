@@ -1,5 +1,9 @@
-import { addParameters, configure } from '@storybook/react';
+import { addParameters, configure, addDecorator } from '@storybook/react';
 import theme from './theme';
+
+import { withKnobs } from '@storybook/addon-knobs';
+
+addDecorator(withKnobs);
 addParameters({
 	options: {
 		isFullscreen: false,
