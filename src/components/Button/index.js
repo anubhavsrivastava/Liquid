@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
+import './Button.scss';
 class Button extends React.Component {
 	constructor(props) {
 		super(props);
@@ -20,10 +22,11 @@ class Button extends React.Component {
 	}
 
 	render() {
-		const { value, mode, size, disabled, loading, fluid, ...restProps } = this.props;
+		const { value, mode, size, disabled, loading, fluid, className, ...restProps } = this.props;
 
+		let cssClasses = classNames('btn', { [`btn-${mode}`]: true, [`btn-${size}`]: true, [`btn-block`]: fluid }, className);
 		return (
-			<button {...restProps} disabled={disabled} loading={loading} fluid={fluid} size={size} mode={mode}>
+			<button className={cssClasses} {...restProps} disabled={disabled} loading={loading} fluid={fluid} size={size} mode={mode}>
 				{value}
 			</button>
 		);

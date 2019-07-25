@@ -1,0 +1,22 @@
+.btn {
+	&.btn-block {
+		display: block;
+		width: 100%;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+	}
+
+	&.btn-primary {
+	}
+
+	&.btn-secondary {
+	}
+
+	&.btn-regular {
+	}
+
+	&.btn-big {
+	}
+}

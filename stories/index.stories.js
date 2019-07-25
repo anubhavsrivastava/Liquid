@@ -11,12 +11,4 @@ import { text, boolean, number } from '@storybook/addon-knobs';
 import Button from '../src/components/Button';
 // storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Button', module)
-	.add('with text', () => <Button disabled={boolean('Disabled', false)} onClick={action('clicked')} value={text('Label', 'Hello Storybook')} />)
-	.add('with some emoji', () => (
-		<Button onClick={action('clicked')}>
-			<span role="img" aria-label="so cool">
-				😀 😎 👍 💯
-			</span>
-		</Button>
-	));
+storiesOf('Button', module).add('with text', () => <Button disabled={boolean('Disabled', false)} onClick={action('clicked')} value={text('Label', 'Hello Storybook')} />);
