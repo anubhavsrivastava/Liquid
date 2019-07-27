@@ -27,7 +27,7 @@ export default class Button extends React.Component {
 
 		let cssClasses = classNames('btn', { [`btn-${mode}`]: true, [`btn-${size}`]: true, [`btn-block`]: fluid }, className);
 		return (
-			<button className={cssClasses} {...restProps} disabled={disabled} loading={loading} fluid={fluid} size={size} mode={mode}>
+			<button className={cssClasses} {...restProps} disabled={disabled} size={size} mode={mode}>
 				{value}
 			</button>
 		);
@@ -46,8 +46,12 @@ Button.propTypes = {
 	size: PropTypes.oneOf(['regular', 'big']),
 	/** Boolean indicating whether the button should render as disabled */
 	disabled: PropTypes.bool,
+	/** Boolean indicating whether the button is in loading state */
 	loading: PropTypes.bool,
-	fluid: PropTypes.bool
+	/** Boolean indicating whether the button should take the full width on container */
+	fluid: PropTypes.bool,
+	/** onClick handler for the button */
+	onClick: PropTypes.func
 };
 
 Button.defaultProps = {
