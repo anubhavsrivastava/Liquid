@@ -36,8 +36,15 @@ export default class Button extends React.Component {
 
 Button.propTypes = {
 	value: PropTypes.string.isRequired,
+	/**
+	 * The type of the button, 'primary' or 'secondary'
+	 */
 	mode: PropTypes.oneOf(['primary', 'secondary']),
+	/**
+	 * The size of the button, 'regular' or 'big'
+	 */
 	size: PropTypes.oneOf(['regular', 'big']),
+	/** Boolean indicating whether the button should render as disabled */
 	disabled: PropTypes.bool,
 	loading: PropTypes.bool,
 	fluid: PropTypes.bool

@@ -4,10 +4,11 @@ import theme from './theme';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
+import { htmlDecorator } from './html';
 import { withPropsTable } from 'storybook-addon-react-docgen';
 import { withInfo } from '@storybook/addon-info';
 
-addDecorator(withPropsTable);
+// addDecorator(withPropsTable);
 
 addDecorator(
 	withInfo({
@@ -16,10 +17,12 @@ addDecorator(
 );
 
 addDecorator(jsxDecorator);
+addDecorator(htmlDecorator);
 
 addDecorator(withKnobs);
 addParameters({
 	jsx: { skip: 1 },
+	html: { skip: 2 },
 	options: {
 		isFullscreen: false,
 
