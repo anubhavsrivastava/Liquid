@@ -25,9 +25,9 @@ export default class Button extends React.Component {
 	render() {
 		const { value, mode, size, disabled, loading, fluid, className, ...restProps } = this.props;
 
-		let cssClasses = classNames('btn', { [`btn-${mode}`]: true, [`btn-${size}`]: true, [`btn-block`]: fluid }, className);
+		let cssClasses = classNames('btn', { [`btn-${mode}`]: true, [`btn-spinner`]: loading, [`btn-${size}`]: true, [`btn-block`]: fluid }, className);
 		return (
-			<button className={cssClasses} {...restProps} disabled={disabled} size={size} mode={mode}>
+			<button onClick={this.onClick} className={cssClasses} {...restProps} disabled={disabled} size={size} mode={mode}>
 				{value}
 			</button>
 		);
@@ -35,14 +35,11 @@ export default class Button extends React.Component {
 }
 
 Button.propTypes = {
+	/** The text to be displayed in the button */
 	value: PropTypes.string.isRequired,
-	/**
-	 * The type of the button, 'primary' or 'secondary'
-	 */
+	/** The type of the button, 'primary' or 'secondary' */
 	mode: PropTypes.oneOf(['primary', 'secondary']),
-	/**
-	 * The size of the button, 'regular' or 'big'
-	 */
+	/** The size of the button, 'regular' or 'big' */
 	size: PropTypes.oneOf(['regular', 'big']),
 	/** Boolean indicating whether the button should render as disabled */
 	disabled: PropTypes.bool,

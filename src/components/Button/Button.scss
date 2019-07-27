@@ -1,4 +1,35 @@
 .btn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+
+	&.btn-spinner {
+		opacity: 0.8;
+
+		@keyframes btn-spinner-border {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+			vertical-align: text-bottom;
+			border: 2px solid currentColor;
+			border-right-color: transparent;
+			border-radius: 50%;
+			margin: 0 0 0 5px;
+			-webkit-animation: btn-spinner-border 0.75s linear infinite;
+			animation: btn-spinner-border 0.75s linear infinite;
+		}
+	}
+	background-color: transparent;
+	border: 2px solid transparent;
+
 	&.btn-block {
 		display: block;
 		width: 100%;
@@ -9,14 +40,24 @@
 	}
 
 	&.btn-primary {
+		background-color: #1ea7fd;
 	}
 
 	&.btn-secondary {
+		background-color: #6c757d;
 	}
 
 	&.btn-regular {
+		padding: 0.25rem 0.5rem;
+		font-size: 0.875rem;
+		line-height: 1.5;
+		border-radius: 0.2rem;
 	}
 
 	&.btn-big {
+		padding: 0.5rem 1rem;
+		font-size: 1.25rem;
+		line-height: 1.5;
+		border-radius: 0.3rem;
 	}
 }
