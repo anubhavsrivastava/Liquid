@@ -1,14 +1,10 @@
 import { addParameters, configure, addDecorator } from '@storybook/react';
-import React from 'react';
 import theme from './theme';
 
 import { withKnobs } from '@storybook/addon-knobs';
 import { jsxDecorator } from 'storybook-addon-jsx';
 import { htmlDecorator } from './html';
-// import { withPropsTable } from 'storybook-addon-react-docgen';
 import { withInfo } from '@storybook/addon-info';
-
-// addDecorator(withPropsTable);
 
 addDecorator(
 	withInfo({
