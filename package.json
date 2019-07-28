@@ -1,45 +1,46 @@
 {
-  "name": "liquid",
-  "version": "0.0.1",
-  "description": "Minimilistic React UI Components",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/Liquid.git"
-  },
-  "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/anubhavsrivastava/Liquid/issues"
-  },
-  "homepage": "https://github.com/anubhavsrivastava/Liquid#readme",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-info": "^5.1.9",
-    "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addon-storysource": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "storybook-addon-jsx": "^7.1.5",
-    "storybook-addon-react-docgen": "^1.2.2",
-    "style-loader": "^0.23.1"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6"
-  }
+	"name": "liquid",
+	"version": "0.0.1",
+	"description": "Minimilistic React UI Components",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook && node post-build.js && cp ./media/favicon.ico ./storybook-static/favicon.ico"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/anubhavsrivastava/Liquid.git"
+	},
+	"author": {
+		"name": "Anubhav Srivastava",
+		"email": "anubhav.srivastava00@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/anubhavsrivastava/Liquid/issues"
+	},
+	"homepage": "https://github.com/anubhavsrivastava/Liquid#readme",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@storybook/addon-actions": "^5.1.9",
+		"@storybook/addon-info": "^5.1.9",
+		"@storybook/addon-knobs": "^5.1.9",
+		"@storybook/addon-links": "^5.1.9",
+		"@storybook/addon-storysource": "^5.1.9",
+		"@storybook/addons": "^5.1.9",
+		"@storybook/react": "^5.1.9",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^3.1.0",
+		"eslint-plugin-react": "^7.14.3",
+		"node-sass": "^4.12.0",
+		"replace-in-file": "^4.1.1",
+		"sass-loader": "^7.1.0",
+		"storybook-addon-jsx": "^7.1.5",
+		"storybook-addon-react-docgen": "^1.2.2",
+		"style-loader": "^0.23.1"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6"
+	}
 }
